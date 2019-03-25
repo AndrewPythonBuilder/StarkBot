@@ -31,6 +31,12 @@ def answer_questions(bot, update):
             buttons = [[InlineKeyboardButton('Не знаю', callback_data='0')],[InlineKeyboardButton('GitLab — сайт и система управления репозиториями кода для Git', callback_data='1')]]
             keyboard = InlineKeyboardMarkup(buttons)
             bot.send_message(message.chat.id, 'Что такое git.lab', reply_markup=keyboard)
+        else:
+            bot.send_message(message.chat.id, 'Ну что ж, я не знал.')
+            bot.send_message(286077227, message.text)
+            buttons = [[InlineKeyboardButton('Не знаю', callback_data='0')],[InlineKeyboardButton('GitLab — сайт и система управления репозиториями кода для Git', callback_data='1')]]
+            keyboard = InlineKeyboardMarkup(buttons)
+            bot.send_message(message.chat.id, 'Что такое git.lab', reply_markup=keyboard)
     elif message.text == 'Посмотреть':
         bot.send_message(message.chat.id, constants.stih)
     else:
